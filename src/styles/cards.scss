@@ -5,14 +5,15 @@ html {
   font-size: 16px;
 }
 
-.main {
-  padding-top: 50px;
+.catalog {
+  padding: 50px 40px;
   box-sizing: border-box;
   font-weight: $font-weight-medium;
   display: grid;
   grid-template-rows: auto auto auto;
-  gap: 46px 48px;
   justify-content: center;
+  column-gap: 46px;
+  row-gap: 48px;
 
   @include on-calculator {
     grid-template-columns: auto;
@@ -41,7 +42,10 @@ html {
   width: 200px;
   box-sizing: border-box;
   border: 1px solid $light-gray;
-  transition: all 0.3s ease-in-out;
+  transition:
+    transform 0.3s,
+    color 0.3s,
+    background-color 0.3s;
 
   &__title {
     font-size: 12px;
@@ -51,7 +55,7 @@ html {
   }
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.2);
 
     .card__title {
       color: #34568b;

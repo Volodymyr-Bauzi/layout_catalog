@@ -5,13 +5,13 @@
 }
 
 @mixin on-calculator {
-  @media (max-width: 575px) {
+  @media (max-width: 487px) {
     @content;
   }
 }
 
 @mixin on-phone {
-  @media (min-width: 576px) {
+  @media (min-width: 488px) {
     @content;
   }
 }
