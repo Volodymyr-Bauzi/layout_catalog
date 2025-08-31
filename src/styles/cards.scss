@@ -12,8 +12,7 @@ html {
   display: grid;
   grid-template-rows: auto auto auto;
   justify-content: center;
-  column-gap: 46px;
-  row-gap: 48px;
+  gap: 48px 46px;
 
   @include on-calculator {
     grid-template-columns: auto;
