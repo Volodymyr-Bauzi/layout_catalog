@@ -51,13 +51,14 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: color $transition-duration;
 
         &:hover {
-          color: var(--blue);
+          color: $blue;
         }
 
         &.is-active {
-          color: var(--blue);
+          color: $blue;
           position: relative;
 
           &::after {
@@ -67,7 +68,7 @@ body {
             left: 0;
             right: 0;
             height: 4px;
-            background-color: var(--blue);
+            background-color: $blue;
             border-radius: 8px;
           }
         }

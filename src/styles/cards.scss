@@ -6,28 +6,27 @@ html {
 }
 
 .catalog {
-  padding: 50px 40px;
+  padding: $catalog-padding-x $catalog-padding-y;
   box-sizing: border-box;
   font-weight: $font-weight-medium;
   display: grid;
   grid-template-rows: auto auto auto;
   justify-content: center;
-  gap: 48px 46px;
+  gap: $row-gap $column-gap;
+  overflow: visible;
 
-  @include on-calculator {
-    grid-template-columns: auto;
-  }
+  grid-template-columns: repeat(1, $card-width);
 
   @include on-phone {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @include on-tablet {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @include on-desktop {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, $card-width);
   }
 }
 
@@ -38,13 +37,13 @@ html {
   background-color: $white;
   border-radius: 5px;
   padding: 2rem 16px 16px;
-  width: 200px;
+  width: $card-width;
   box-sizing: border-box;
   border: 1px solid $light-gray;
   transition:
-    transform 0.3s,
-    color 0.3s,
-    background-color 0.3s;
+    transform $transition-duration,
+    color $transition-duration,
+    background-color $transition-duration;
 
   &__title {
     font-size: 12px;
